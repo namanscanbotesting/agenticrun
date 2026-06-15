@@ -1,0 +1,31 @@
+# AgentVault Python Agent Requirements
+
+# Core dependencies
+asyncio-mqtt>=0.16.0
+aiohttp>=3.8.0
+requests>=2.31.0
+
+# AI/ML dependencies
+scikit-learn>=1.3.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Casper integration (would be installed from Casper)
+# casper-agent-skills>=0.1.0
+# casper-x402>=0.1.0
+# cspr-cloud-api>=1.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+tenacity>=8.2.0  # For retry logic
+
+# Logging and monitoring
+loguru>=0.7.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# Type checking
+mypy>=1.5.0
