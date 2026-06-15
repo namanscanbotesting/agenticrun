@@ -1,0 +1,29 @@
+[package]
+name = "agent-vault-contracts"
+version = "0.1.0"
+edition = "2021"
+description = "AgentVault Smart Contracts for Casper Network - Autonomous RWA Portfolio Manager"
+authors = ["AgentVault Team"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+path = "src/lib.rs"
+
+[dependencies]
+odra = { version = "1.3", default-features = false }
+odra-casper = { version = "1.3", features = ["contract"] }
+casper-contract = "4.0.0"
+casper-types = "4.0.0"
+
+[dev-dependencies]
+odra-test = "1.3"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "z"
+strip = true
+
+[features]
+default = []
+test = ["odra/test"]
